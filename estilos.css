@@ -1,0 +1,9 @@
+p.principal { font-size: 20px;}
+
+p.aside { color: red;}
+
+p#pie{font-size: 10px;}
+
+p[name ="especial"]{font-size: 20px; color: blue;}
+
+p[name^="mi"]{font-size: 20px; color: green;}
