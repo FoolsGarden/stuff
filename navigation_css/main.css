@@ -2,12 +2,40 @@
   margin: 0 auto;
   width: 768px;
 }
+a:visited{
+  color:#F2F2F2
+}
+
+#nav_bar{
+  background: #999999;
+  color: white; 
+  height: 30px;
+}
+
+a:link{
+  text-decoration: none;
+}
+
+#nav_bar li {
+display:inline-block;
+text-align: center;
+width:150px; 
+padding: 5px 10px; //adjust
+font-size: 30px;
+}
 
 header {
   background-color: black;
+  margin-bottom: -20px;
 }
 
 #logo {
   display: block;
   margin: 0 auto;
+}
+
+.footer {
+clear:both;
+margin-top: 25px;
+margin-bottom: 25px;
 }
