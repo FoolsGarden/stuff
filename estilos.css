@@ -1,8 +1,16 @@
+*{margin: 0px; padding: 0px;}
 p.principal { font-size: 20px;}
-
+body{text-align: center;}
+#agrupar {width: 90%;
+margin: 15px auto;
+text-align: left;}
 p.aside { color: red;}
 
 p#pie{font-size: 10px;}
+
+p:only-child{background: green}
+
+p:nth-child(even){background: #999999}
 
 p[name ="especial"]{font-size: 20px; color: blue;}
 
