@@ -1,0 +1,44 @@
+  <h1>Bienvenido a Sinatra!</h1>
+  <p>Este es un esqueleto de sinatra que armamos para ti</p>
+
+  
+<form action="/cool_url" method ="get">
+  GetCool:<br><br>
+  <input type="text" name="Get Cool">
+  <br><br>
+  <input type="submit" name="Submit">
+  <br>Text Area<br>
+  <textarea cols="40" rows="5" name="textArea">
+  </textarea>
+  <br>
+  <div><br>
+  <input type="radio" name="btnR" value="Milk"> Milk<br>
+  <input type="radio" name="btnR" value="Butter"> Butter<br>
+  <input type="radio" name="btnR" value="Cheese"> Cheese
+  <br>
+  </div>
+  <div><br>
+  <input type="checkbox" name="chckbx" value="Milk"> Milk<br>
+  <input type="checkbox" name="chckbx" value="Butter"> Butter<br>
+  <input type="checkbox" name="chckbx" value="Cheese"> Cheese<br>
+  <br>
+  </div>
+  <div align="center">
+  <select name="slcbx">
+  <option value="Milk">Milk</option>
+  <option value="Cheese">Cheese</option>
+  <option value="Bread">Bread</option>
+  </select>
+  </div>
+
+</form>
+
+<form action="/cool_url" method ="post">
+  PostCool:<br>
+  <input type="text" name="PostCool"><br>
+  <br>
+  <input type="submit" name="Submit">
+  <input type="text" name="post[title]">
+  <input type="text" name="post[price]">
+  <textarea name="post[description]"></textarea>
+</form>

@@ -1,19 +1,76 @@
-.container {
+.container {  
   margin: 0 auto;
   width: 768px;
 }
+
 a:visited{
+
   color:#F2F2F2
+}
+
+a:link{
+
+  text-decoration: none;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+header {
+
+  background-color: black;
+}
+
+.content{
+  width: 630px;
+  height: 540px;
+  float: left;
+  border-bottom: 2px solid black;
+}
+.content h2{
+  margin: 20px 0px 0px 10px;
+}
+.content section{
+  margin: 0px 0px 0px 10px;
 }
 
 #nav_bar{
   background: #999999;
   color: white; 
-  height: 30px;
+  float: right;
+  width: 138px;
+  height: 540px;
+ border-bottom: 2px solid black;
+  }
+
+#nav_bar li {
+display:block;
+/*border: 1px solid black;*/
+text-align: center;
+margin: 20px 20px 20px -20px;
+font-size: 20px;
 }
 
-a:link{
-  text-decoration: none;
+.footer {
+clear:both;
+position: relative;
+top:25px;
+text-align:left;
+margin-top: 25px;
+margin-bottom: 25px;
+font-weight: bold;
+}
+
+
+/*
+====================Primer ejercico
+
+#nav_bar{
+  background: #999999;
+  color: white; 
+  height: 30px;
 }
 
 #nav_bar li {
@@ -24,9 +81,11 @@ padding: 5px 10px; //adjust
 font-size: 30px;
 }
 
-header {
-  background-color: black;
-  margin-bottom: -20px;
+=====================Segundo ejercicio
+
+a:link{
+
+  text-decoration: none;
 }
 
 #logo {
@@ -34,8 +93,49 @@ header {
   margin: 0 auto;
 }
 
+header {
+
+  background-color: black;
+}
+
+.content{
+  width: 610px;
+  height: 540px;
+  float: right;
+  border-bottom: 2px solid black;
+}
+.content h2{
+  margin: 20px 0px 0px 10px;
+}
+.content section{
+  margin: 0px 0px 0px 10px;
+}
+
+#nav_bar{
+  background: #999999;
+  color: white; 
+  float: left;
+  width: 158px;
+  height: 540px;
+ border-bottom: 2px solid black;
+  }
+
+#nav_bar li {
+display:block;
+text-align: center;
+margin: 20px 20px 20px -20px;
+font-size: 20px;
+}
+
 .footer {
 clear:both;
+position: relative;
+right: 85px;
+top:25px;
+text-align: center;
 margin-top: 25px;
 margin-bottom: 25px;
+font-weight: bold;
 }
+
+*/
