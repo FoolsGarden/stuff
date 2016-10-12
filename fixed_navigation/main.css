@@ -1,0 +1,51 @@
+.container {
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px; 
+  width: 768px;
+}
+a:link{
+  text-decoration: none;
+}
+a:visited{
+  color:#F2F2F2;
+}
+.top-nav{
+  background: #0f0f0a;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+}
+.nav_bar{
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.top-nav li {
+  display: inline-block;
+  list-style: none;
+  color: #000;
+  float: left;
+  margin: 0px 20px;
+  height: auto;
+}
+
+#logo {
+  float: left;
+  margin: 0px 250px 0px 0px;
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.footer {
+clear:both;
+position: relative;
+top:25px;
+text-align:left;
+font-weight: bold;
+}
