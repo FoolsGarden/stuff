@@ -1,0 +1,11 @@
+<h1>Find Anagrams!</h1>
+<% if @new_word %>
+  <p>'<%= @new_word %>':</p>
+  <p><%= @resp %></p>
+<% end %>
+<!-- Aquí deberá ir la forma de HTML -->
+<form action="/new_word" method ="post">
+  Type another word to discover its anagrams:<br>
+<%= erb(:prueba) %>
+</form>
+
