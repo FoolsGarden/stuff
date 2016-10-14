@@ -3,10 +3,10 @@
     <p>Tu Abuelita dice: "<span id="grandma_says">
       <%= @abuelita %></span>"</p>
   <% end %>
-
-  <form action="#" method="post" id = "form1">
+  <p id = "resp"></p>
+  <form action="/abuelita" method="post" id = "form1">
     Dile algo a tu abuelita:
     <br>
-    <input type="text" name="user_input">
+    <input type="text" name="user_input" id = "text_in">
     <input type="submit" value="Dilo!">
   </form> 
