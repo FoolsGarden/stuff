@@ -6,7 +6,7 @@ $(document).ready(function()
     var cadena = $(this).serialize();
     $.post('/abuelita',cadena,function(resp)
     {
-       $("#resp").html(resp);
+       $("#resp").html("Tu Abuelita dice: "+resp);
        
     });
     $("#text_in").val("");
