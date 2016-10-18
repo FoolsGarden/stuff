@@ -1,0 +1,18 @@
+<h1><%= @variable %></h1>
+<% if @variable == "Registrate" %>
+<form>
+    Nombre:<br><input type="text" name="name"><br>
+    Email:<br> <input type="email" name="email"><br>
+    Contraseña:<br> <input type="password" name="password"><br>
+    <button formmethod="post" formaction="/user" type="submit" name="accion" value="reg">Aceptar</button>
+    <button formmethod="post" formaction="/" type="submit">Atras</button>
+</form>
+<% else %>
+<form>
+    Email:<br><input type="email" name="email" ><br>
+    Contraseña:<br> <input type="password" name="password"><br>
+    <button formmethod="post" formaction="/user" type="submit" name="accion" value = "login">Aceptar</button>
+    <button formmethod="post" formaction="/" type="submit">Atras</button>
+</form>
+<% end %>
+  <h6> *Esta es la pagina de internet más simple que jamás haya sido creada, esperamos que no te diviertas y que tu experiencia con nosotros sea extremadamente desagradable.</h6>
