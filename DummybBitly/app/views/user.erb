@@ -1,0 +1,19 @@
+<h1>Usuario:<%= @name %></h2>
+<!-- Forma para meter los URL -->
+<form>
+<%= erb(:form) %>
+</form>
+
+<% if !@urls.empty? %>
+  <h2>Urls available: </h2>
+  <%  @urls.each do |url| %>
+    <p>URL: <%=  url[0] %> Click's: <%=  url[1] %></p>
+  <% end %>
+<% end %>
+
+<!-- Boton de logout -->
+<form method = "get" action = "/logout" >
+  <br><button type = "submit">Logout</button>
+</form>
+
+<h6> *Esta es la pagina de internet más simple que jamás haya sido creada, esperamos que no te diviertas y que tu experiencia con nosotros sea extremadamente desagradable.</h6>

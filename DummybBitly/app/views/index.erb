@@ -1,0 +1,16 @@
+  <h1>¡Bienvenido!</h1>
+  <p>Si eres un usuario registrado inicia sesion; sino, "Registrate"</p>
+<!-- Forma para hacer un short url -->
+<form>
+<%= erb(:form) %>
+</form>
+<!-- Forma para registrarce y hacer login -->
+<form action = "/login" method = "get">
+    <br><button type = "submit">Iniciar Sesion</button>
+    <button formmethod = "get" formaction = "/reg" type = "submit">Registrarme</button>
+<form>
+
+
+  <h6> *Esta pagina de internet no fue creada pensando en el usuario,  esperamos que usar nuestras aplicaciones sea abrumante y que su experiencia con nosotros sea extremadamente desagradable.
+    Gracias por su preferencia.</h6>
+  
