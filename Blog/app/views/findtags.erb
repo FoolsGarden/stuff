@@ -3,7 +3,7 @@
         <h3>Tags:</h3>
         <%@tags.each do |tag| %>
             <p>tag <%= tag.name %></p>
-            <a href="/tag/find/post<%= post.id %>">Post(s)</a>
+            <a href="/tag/find/post/<%= tag.id %>">Post(s)</a>
         <% end %>
     <% else %>
         <p>No hay ningún tag</p>
