@@ -25,5 +25,4 @@ class Url < ActiveRecord::Base
       errors.add(:long_url,"invalid url") 
     end
   end
-  # Remember to create a migration!
 end

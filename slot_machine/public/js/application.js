@@ -10,10 +10,7 @@ $(document).ready(function() {
           $("#die").html(data);
             
      });
-  //   $("#text_in").val("");
-    //$('#grandma_says').append(x)
-  
-  });
+   });
 // $(document).ready(function() 
 // { 
 //   $("#form1").submit(function()

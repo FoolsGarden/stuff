@@ -1,6 +1,5 @@
 require 'uri'
 get '/' do
-# Deja a los usuarios crear una URL reducida y despliega una lista de URLs. 
 erb :index
 end
 
@@ -22,7 +21,6 @@ post '/urls' do
     erb :index
 end
 
-# e.g., /q6bda
 post '/short_url' do
   if params
     p params[:short_url]
@@ -31,6 +29,5 @@ post '/short_url' do
   else
     erb :index
   end
-  # redirige a la URL original
 end
 

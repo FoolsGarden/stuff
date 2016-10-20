@@ -13,6 +13,8 @@ end
 get '/cool_url' do
   puts "Este es un GET a /cool_url"
   puts "Esto es lo que vale Params: #{params.inspect}"
+  puts "Esto es lo que vale GetCool: #{params[:GetCool]}"
+  @text = params[:GetCool] 
   erb :get_cool_url  # Esto renderea una vista llamada get_cool_url.erb
 end
 
