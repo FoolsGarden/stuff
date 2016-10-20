@@ -1,0 +1,13 @@
+<!-- Figura para un posts -->
+<form id="form5" action = "/find/post" method="post">
+    <br><input type="text" id ="post_id" name = "post_id" placeholder = "Post_id:"/>
+    <br><button id="sumbit" type = "sumbit">Find</button><br>
+
+    <% if @post %>
+        <h3>Posts:</h3>
+        <p>Title: <%= @post.title %></p>
+        <p>Body: <%= @post.body %></p>
+    <% else %>
+        <p>No existe el post</p>
+    <% end %>
+</form>

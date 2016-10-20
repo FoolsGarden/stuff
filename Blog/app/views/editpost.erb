@@ -1,0 +1,13 @@
+<% if @post %> 
+  <div>
+    <form id="form3" action = "/post/edit/<%= @post.id %>" method="post">
+      Titulo de tu post:
+      <br><input type="text" id ="title" name = "title" value = "<%= @post.title %>"/><br><br>
+      Escribe tu post:
+      <br><textarea id = "post" name="post" cols = "50" rows = "4"><%= @post.body%></textarea><br>
+      <br><button type = "submit">Aceptar</button><br>
+    </form>
+  <div>
+<% else %>
+  <h1>Ocurrió un error, sentimos las molestias</h1>
+<% end %>

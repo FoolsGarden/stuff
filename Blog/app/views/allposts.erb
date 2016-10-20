@@ -1,10 +1,14 @@
-<br><button id="sumbit" type = "sumbit">Mostrar posts</button><br>
-<% if @titles && @bodys %>
-<h3>Posts:</h3>
-    <% for i in 0..@titles.size-1 %>
-      <p><%= @titles[i] %></p>
-      <p><%= @bodys[i] %></p>
+<!-- Figura para los posts -->
+<% if @posts %>
+    <% unless @posts.empty? %>
+        <h3>Posts:</h3>
+        <%@posts.each do |post| %>
+            <p>Title: <%= post.title %> <br>
+            Body: <%= post.body %></p>
+            <a href="/post/edit/<%= post.id %>">Editar</a>
+            <a href="/post/delete/<%= post.id %>">Eliminar</a>
+        <% end %>
+    <% else %>
+        <p>No hay ningún post</p>
     <% end %>
-<% else %>
-    <p>No hay ningún post</p>
 <% end %>

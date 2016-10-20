@@ -1,0 +1,13 @@
+<% if @post %> 
+  <div>
+    <form id="form4" action = "/post/delete/<%= @post.id %>" method="post">
+      <p>Titulo: <%= @post.title %> </p><br><br>
+      <br><p>Post: <%= @post.body%></p><br>
+      ¿Seguro que desea eliminar el post?
+      <button type = "sumbit">Eliminar</button><br>
+      <button formaction = "/" formmethod="get" type = "sumbit">Cancelar</button><br>
+    </form>
+  <div>
+<% else %>
+  <h1>Ocurrió un error, sentimos las molestias</h1>
+<% end %>
