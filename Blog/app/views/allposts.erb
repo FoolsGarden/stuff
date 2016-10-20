@@ -1,0 +1,10 @@
+<br><button id="sumbit" type = "sumbit">Mostrar posts</button><br>
+<% if @titles && @bodys %>
+<h3>Posts:</h3>
+    <% for i in 0..@titles.size-1 %>
+      <p><%= @titles[i] %></p>
+      <p><%= @bodys[i] %></p>
+    <% end %>
+<% else %>
+    <p>No hay ningún post</p>
+<% end %>

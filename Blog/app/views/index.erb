@@ -1,0 +1,19 @@
+<div id ="Principal">
+  <h1>Bienvenido a mi Blog</h1>
+  <h3>¡Aquí podras hacer "Posts" y "Tags"!</h3>
+  <h4>Y en un futuro, quiza hasta compartirlos con tus amigos</h4>  <button id="n_Post">Nuevo Post</button>
+    <button id="a_posts">Posts</button><br><br>
+  <div id="m_posts">
+    <form id="form1" action = "/make/post" method="post">
+       <%= erb :makepost, layout: true %>
+    </form>
+  </div>
+  <div id="all_posts">
+    <form id="form2" action = "/all/posts" method="post">
+       <%= erb :allposts, layout: true %>
+    </form>
+  </div>
+  <h6>*Esta pagina no es una simulación de un blog real, no te emociones.</h6>
+</div>
+
+  
