@@ -2,25 +2,94 @@ $(document).ready(function() {
   //Esconder las formas
   $("#m_posts").hide();
   $("#all_posts").hide();
+  $("#find_posts").hide();
+  $("#all_tags").hide();
 
   $("#n_Post").click(function()
   {
     $("#all_posts").hide();
+    $("#find_posts").hide();
+    $("#all_tags").hide();
     $("#m_posts").show();
   });
   $("#a_posts").click(function()
   {
     $("#m_posts").hide();
+    $("#find_posts").hide();
+    $("#all_tags").hide();
     $("#all_posts").show();
-  });
-  $("#form2").submit(function(event)
-  {
     event.preventDefault();
     //var cadena = $(this).serialize();
     $.post('/all/posts',function(data)
     {       
       //console.log(data);
       $("#all_posts").html(data);
+    });
+
+  });
+  $("#a_tags").click(function()
+  {
+    $("#m_posts").hide();
+    $("#find_posts").hide();
+    $("#all_tags").show();
+    $("#all_posts").hide();
+    event.preventDefault();
+    //var cadena = $(this).serialize();
+    $.post('/all/tags',function(data)
+    {       
+      //console.log(data);
+      $("#all_tags").html(data);
+    });
+    
+  });
+
+  $("#f_posts").click(function()
+  {
+    $("#m_posts").hide();
+    $("#all_posts").hide();
+    $("#all_tags").hide();
+    $("#find_posts").show();
+
+  });
+  // $("body").on("submit","#form2",function(event)
+  // {
+  //   event.preventDefault();
+  //   //var cadena = $(this).serialize();
+  //   $.post('/all/posts',function(data)
+  //   {       
+  //     //console.log(data);
+  //     $("#all_posts").html(data);
+  //   });
+  // });
+  //Busca un post por id y lo despliega
+  $("body").on("submit","#form5",function(event)
+  {
+    event.preventDefault();
+    var cadena = $(this).serialize();
+    $.post('/find/post',cadena,function(data)
+    {       
+      //console.log(data);
+      $("#find_posts").html('<form id="form5" action = "/find/post" method="post">'+ data + '</form>');
+    });
+  });
+
+  $("body").on("submit","#form1",function(event)
+  {
+    event.preventDefault();
+    var cadena = $(this).serialize();
+    $.post('/make/post',cadena,function(data)
+    {       
+      console.log(data);
+      if (data=="true") 
+      {
+        alert("Error");
+      }
+      else
+      {
+        alert("El post fue creado");
+      }
+
+       
     });
   });
 

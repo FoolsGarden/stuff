@@ -2,10 +2,22 @@
     <% unless @tags.empty? %>
         <h3>Tags:</h3>
         <%@tags.each do |tag| %>
-            <p>tag <%= tag.name %></p>
-            <a href="/tag/find/post/<%= tag.id %>">Post(s)</a>
+            <p>Tag: <%= tag.name %> <a href="/tag/find/post/<%= tag.id %>">Post(s)</a></p>
+            
         <% end %>
     <% else %>
         <p>No hay ningún tag</p>
+    <% end %>
+<% end %>
+
+<% if @posts %>
+    <% unless @posts.empty? %>
+        <h3>Posts for tag: <%= @tag.name %> </h3>
+        <%@posts.each do |post| %>
+            <p>Title: <%= post.title %> <br>
+            Body: <%= post.body %></p>
+        <% end %>
+    <% else %>
+        <p>No hay ningún post</p>
     <% end %>
 <% end %>

@@ -1,10 +1,15 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 900px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
+  background: #45A4EE;
+  text-align: center;
 }
-
+button{
+  color: wait;
+  background: #51BDC4;
+}
 input{
   color:gray;
   cursor:pointer;

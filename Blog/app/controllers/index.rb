@@ -2,7 +2,7 @@
 #== Controlador Principal ==
 #===========================
 get '/' do
-  erb :index
+   erb :index
 end
 
 #===========================
