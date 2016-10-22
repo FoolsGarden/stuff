@@ -1,15 +1,30 @@
 <br>
-Titulo de tu post:
-    <br><input type="text" id ="title" name = "title" placeholder = "Titulo:" required/><br>
-    Escribe tu post:
-    <br><textarea id = "post" name="post" cols = "50" rows = "4" placeholder = "Post:" required></textarea><br>
-    <br>Escribe tus tags:
-
-    <br><input type="text" id ="tag1" name = "tags[tag1]" placeholder = "#tag"/>
-    <br><input type="text" id ="tag2" name = "tags[tag2]" placeholder = "#tag"/>
-    <br><input type="text" id ="tag3" name = "tags[tag3]" placeholder = "#tag"/>
-    <br><input type="text" id ="tag4" name = "tags[tag4]" placeholder = "#tag"/>
-    <br><input type="text" id ="tag5" name = "tags[tag5]" placeholder = "#tag"/><br>
-
-    <br><button type = "submit">ENVIAR</button><br>
-    <br><button type = "reset">RESET</button><br>
+<div class="form-group">
+    <label>
+        Titulo de tu post:
+    </label>
+    <input type="text" class="form-control" id ="title" name = "title" placeholder = "Titulo:" required/>
+</div>
+<div class="form-group">
+    <label>
+        Escribe tu post:
+    </label>
+    <textarea id = "post" class="form-control" name="post" cols = "100" rows = "4" placeholder = "Post:" required></textarea><br>
+</div>
+<div class="form-group">
+    <label>
+        Escribe tus tags:
+    </label>
+    <input type="text" id ="tag1" class="form-control" name = "tags[tag1]" placeholder = "#tag"/>
+    <input type="text" id ="tag2" class="form-control" name = "tags[tag2]" placeholder = "#tag"/>
+    <input type="text" id ="tag3" class="form-control" name = "tags[tag3]" placeholder = "#tag"/>
+    <input type="text" id ="tag4" class="form-control" name = "tags[tag4]" placeholder = "#tag"/>
+    <input type="text" id ="tag5" class="form-control" name = "tags[tag5]" placeholder = "#tag"/>
+               
+</div>
+<button type = "submit" class="btn btn-success">
+    ENVIAR
+</button>
+<button type = "reset" class="btn btn-warning">
+    RESET
+</button>

@@ -1,13 +1,37 @@
 <!-- Figura para un posts -->
-<form id="form5" action = "/find/post" method="post">
-    <br><input type="text" id ="post_id" name = "post_id" placeholder = "Post_id:"/>
-    <br><button id="sumbit" type = "sumbit">Find</button><br>
-
-    <% if @post %>
-        <h3>Posts:</h3>
-        <p>Title: <%= @post.title %></p>
-        <p>Body: <%= @post.body %></p>
-    <% else %>
-        <p>No existe el post</p>
-    <% end %>
+<br>
+<form id="form5" class="form-inline" action = "/find/post" method="post">
+  <div class="group-form">
+    <label>Escribe el 'id' de tu post:</label>
+    <br>
+    <input type="text" id ="post_id" class="form-control" name = "post_id" placeholder = "Post_id:"/>
+    <button id="sumbit" type = "sumbit" class="btn btn-success"
+    data-toggle="modal" data-target="#find_Modal">
+      Find
+    </button>
+  </div>
 </form>
+
+<!-- Modal -->
+  <div class="modal fade" id="find_Modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+          <h4 class="modal-title">
+            Post:
+          </h4>
+          </div>
+          <div class="modal-body" id="find_post_model">
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>

@@ -4,8 +4,8 @@
       <p>Titulo: <%= @post.title %> </p><br><br>
       <br><p>Post: <%= @post.body%></p><br>
       ¿Seguro que desea eliminar el post?
-      <button type = "sumbit">Eliminar</button><br>
-      <button formaction = "/" formmethod="get" type = "sumbit">Cancelar</button><br>
+      <button type = "sumbit" class="btn btn-danger">Eliminar</button><br>
+      <button formaction = "/" formmethod="get" type = "sumbit" class="btn btn-warning">Cancelar</button><br>
     </form>
   <div>
 <% else %>

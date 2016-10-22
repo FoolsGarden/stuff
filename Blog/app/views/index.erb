@@ -1,31 +1,32 @@
-<div id ="Principal">
-  <h1>Bienvenido a mi Blog</h1>
-  <h3>¡Aquí podras hacer "Posts" y "Tags"!</h3>
-  <h4>Y en un futuro, quiza hasta compartirlos con tus amigos</h4>
-    <button id="n_Post">Nuevo Post</button>
-    <button id="a_posts">Posts</button>
-    <button id="f_posts">Buscar un post</button>
-    <button id="a_tags">Tags</button>
+<div id ="Principal" class="row">
+  <div class="col-md-12">
+    <h1 class="page-header">WELCOME TO THE BEST BLOG EVER!!!</h1>
+    <h3>¡Aquí podras hacer "Posts" y "Tags"!</h3>
+    <h4>Y en un futuro, quiza hasta compartirlos con tus amigos</h4>
+      <button id="n_Post" class="btn btn-primary">Nuevo Post</button>
+      <button id="a_posts" class="btn btn-primary">Posts</button>
+      <button id="f_posts" class="btn btn-primary">Buscar un post</button>
+      <button id="a_tags" class="btn btn-primary">Tags</button>
+  </div>
   <!-- Figura hacer un post -->
-  <div id="m_posts">
+  <div id="m_posts" class="col-md-12">
     <form id="form1" action = "/make/post" method="post">
        <%= erb :makepost, layout: true %>
     </form>
   </div>
   <!-- Figura para todos los posts -->
-  <div id="all_posts">
+  <div id="all_posts" class="col-md-12">
       <%= erb :allposts, layout: true %>
    </div>
   <!-- Figura de un post -->
-  <div id="find_posts">
+  <div id="find_posts" class="col-md-12">
        <%= erb :findpost, layout: true %>
   </div>
 
-  <div id="all_tags">
+  <div id="all_tags" class="col-md-12">
       <%= erb :findtags, layout: true %>
    </div>
-
-  <h6>*Esta pagina no es una simulación de un blog real, no te emociones.</h6>
+  <div class="col-md-12">
+    <h6>*Esta pagina no es una simulación de un blog real, no te emociones.</h6>
+  </div>
 </div>
-
-  

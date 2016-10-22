@@ -1,23 +1,43 @@
 <% if @tags %>
     <% unless @tags.empty? %>
         <h3>Tags:</h3>
+        <div class="panel panel-info">
         <%@tags.each do |tag| %>
-            <p>Tag: <%= tag.name %> <a href="/tag/find/post/<%= tag.id %>">Post(s)</a></p>
-            
+            <div class="panel-body"><%= tag.name %> 
+                <a class="display_tags" data-toggle="modal" data-target="#postsModal" name="<%= tag.id %>">
+                    Post(s)
+                </a>
+            </div>
+            <!-- "href="/tag/find/post/<%= tag.id %>" -->
         <% end %>
+         </div>
     <% else %>
         <p>No hay ningún tag</p>
     <% end %>
 <% end %>
 
-<% if @posts %>
-    <% unless @posts.empty? %>
-        <h3>Posts for tag: <%= @tag.name %> </h3>
-        <%@posts.each do |post| %>
-            <p>Title: <%= post.title %> <br>
-            Body: <%= post.body %></p>
-        <% end %>
-    <% else %>
-        <p>No hay ningún post</p>
-    <% end %>
-<% end %>
+<!-- Modal -->
+<div id="postsModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Posts:</h4>
+      </div>
+      <div class="modal-body" id="posts_in_model">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+           

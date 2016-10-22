@@ -3,13 +3,12 @@
   width: 900px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
-  background: #45A4EE;
-  text-align: center;
+  background: #D8D8D8;
 }
-button{
+/*button{
   color: wait;
   background: #51BDC4;
-}
+}*/
 input{
   color:gray;
   cursor:pointer;

@@ -12,9 +12,9 @@ post '/make/post' do
         Relation.create(post_id: post.id, tag_id: tag.id)
       end
     end
-    return true
+    return erb :makepost, layout: false
   else
-    return false
+    return nil
   end
 end
 
@@ -27,36 +27,57 @@ end
 # Mostrar un post determinado.
 post '/find/post' do
   if Post.exists?(params[:post_id])
-    @post = Post.find(params[:post_id])
+    post = Post.find(params[:post_id])
+    data ="<div class='panel panel-primary'>
+            <div class='panel-heading'>
+              <h3 class='panel-title'>
+                #{post.title}
+              <h3>
+            </div>
+            <div class='panel-body'>
+              #{post.body}
+            </div>
+          </div>"
+  else
+    data = "Ocurró un error"
   end
-  erb :findpost, layout: false
+  return data
 end
 # Editar un post existente.
-get '/post/edit/:id' do
-  @post=Post.find(params[:id])
-  erb :editpost
+post '/post/edit' do
+  id=nil
+  params.each{|x,y| id = x}
+  if id
+    @post = Post.find(id.to_i)
+    data = erb :editpost, layout: false            
+  else
+    data="Error"
+  end
+  return data
 end
-post '/post/edit/:id' do
+post '/post/edit/confirm' do
   post=Post.find(params[:id])
   if post
     post.update(title:params[:title],body:params[:post])
-    "Edición correcta de #{post.title}"
-  else
-    "Algo occurío mal"
   end
+  @posts = Post.all
+  erb :allposts, layout: false
 end
 # Eliminar un post existente.
-get '/post/delete/:id' do
-  @post=Post.find(params[:id])
-  erb :deletepost
-end
-post '/post/delete/:id' do
-  if Post.exists?(params[:id])
-    Post.destroy(params[:id])
-    "El post fue eliminado"
-  else
-    "Algo occurío mal"
+post '/post/delete' do
+  id=nil
+  params.each{|x,y| id = x}
+  if id
+    if Post.exists?(id)
+       Post.destroy(id)
+    end
   end
+  @posts = Post.all
+  erb :allposts, layout: false
+end
+
+post '/post/delete/:id' do
+  
 end
 
 #==========================

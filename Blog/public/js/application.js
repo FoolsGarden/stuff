@@ -1,23 +1,24 @@
 $(document).ready(function() {
   //Esconder las formas
-  $("#m_posts").hide();
+  $("#m_posts").show();
   $("#all_posts").hide();
   $("#find_posts").hide();
   $("#all_tags").hide();
+  $("#id").hide();
 
   $("#n_Post").click(function()
   {
     $("#all_posts").hide();
     $("#find_posts").hide();
     $("#all_tags").hide();
-    $("#m_posts").show();
+    $("#m_posts").slideDown();
   });
   $("#a_posts").click(function()
   {
     $("#m_posts").hide();
     $("#find_posts").hide();
     $("#all_tags").hide();
-    $("#all_posts").show();
+    $("#all_posts").slideDown();
     event.preventDefault();
     //var cadena = $(this).serialize();
     $.post('/all/posts',function(data)
@@ -31,7 +32,7 @@ $(document).ready(function() {
   {
     $("#m_posts").hide();
     $("#find_posts").hide();
-    $("#all_tags").show();
+    $("#all_tags").slideDown();
     $("#all_posts").hide();
     event.preventDefault();
     //var cadena = $(this).serialize();
@@ -48,7 +49,7 @@ $(document).ready(function() {
     $("#m_posts").hide();
     $("#all_posts").hide();
     $("#all_tags").hide();
-    $("#find_posts").show();
+    $("#find_posts").slideDown();
 
   });
   // $("body").on("submit","#form2",function(event)
@@ -68,8 +69,7 @@ $(document).ready(function() {
     var cadena = $(this).serialize();
     $.post('/find/post',cadena,function(data)
     {       
-      //console.log(data);
-      $("#find_posts").html('<form id="form5" action = "/find/post" method="post">'+ data + '</form>');
+      $("#find_post_model").html(data);
     });
   });
 
@@ -79,17 +79,59 @@ $(document).ready(function() {
     var cadena = $(this).serialize();
     $.post('/make/post',cadena,function(data)
     {       
-      console.log(data);
-      if (data=="true") 
+      if (data) 
       {
-        alert("Error");
+        alert("Tu post fue creado con exito!");
+        $("#form1").html(data);
       }
       else
       {
-        alert("El post fue creado");
+        alert("Error");
       }
+    });
+  });
+  $("body").on("click","#confirm_edit_post_btn",function(event)
+  {
+    event.preventDefault();
+    var cadena = $(this).parent().serialize();
+    console.log(cadena);
+    $.post('/post/edit/confirm',cadena,function(data)
+    {       
+      $("#all_posts").html( data );
+    });
+  });
 
-       
+  $("body").on("click",".display_tags",function(event)
+  {
+    event.preventDefault();
+    //var cadena = $(this).val('id');
+    var id = $(this).attr('name');
+ 
+    $.post('/tag/find/post',id,function(data)
+    {       
+      $("#posts_in_model").html( data );
+    });
+  });
+  $("body").on("click","#edit_post_btn",function(event)
+  {
+    event.preventDefault();
+    //var cadena = $(this).val('id');
+    var id = $(this).attr('name');
+ 
+    $.post('/post/edit',id,function(data)
+    {       
+      $("#edit_post_modle").html( data );
+    });
+  });
+  $("body").on("click","#delete_post_btn",function(event)
+  {
+    event.preventDefault();
+    //var cadena = $(this).val('id');
+    var id = $(this).attr('name');
+ 
+    $.post('/post/delete',id,function(data)
+    {       
+      $("#all_posts").html( data );
     });
   });
 
