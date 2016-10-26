@@ -1,0 +1,20 @@
+<% if @user %>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <label class="navbar-brand">
+          <%= @user.name.upcase%>
+        </label>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a>Total Rounds: <%= @user.total_rounds %></a></li>
+        <li><a>Total Score: <%= @user.total_score %></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a id="btn_sign_out"><span class="glyphicon glyphicon-user"></span> SIGN OUT</a></li>
+      </ul>
+        <!-- <li><button id="btn_sign_out" class="btn btn-danger">SIGN OUT</button></li> -->
+    </div>
+  </nav>
+<% end %>
+

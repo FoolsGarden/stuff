@@ -1,0 +1,35 @@
+<% if @question && @round && @deck%>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3>
+        <%= @deck.category %>
+      </h3>
+      <h4>
+      <%= @question.pregunta %>
+      </h4>
+      
+    </div>
+    <div class="panel-body">
+      <button id="btn_op1" class="btn btn-info" value="<%= @question.opcion_A %>">
+      <%= @question.opcion_A %>
+      </button><br><br>
+      <button id="btn_op2" class="btn btn-info" value="<%= @question.opcion_B %>">
+      <%= @question.opcion_B %>
+      </button><br><br>
+      <button id="btn_op3" class="btn btn-info" value="<%= @question.opcion_C %>">
+      <%= @question.opcion_C %>
+      </button><br><br>
+    </div>
+    <div class="panel-footer">
+      <label style="color:green">
+      Right: <%= @round.right %>
+      </label>
+      <label style="color:red">
+      Wrong: <%= @round.wrong %>
+      </label><br><br>
+      <button id="btn_next" class="btn btn-warning">
+        NEXT
+      </button>
+    </div>
+  </div>
+<% end %>

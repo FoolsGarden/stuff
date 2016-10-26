@@ -1,0 +1,23 @@
+<% if  @round %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3>
+        Your final score is:
+      </h3>
+    </div>
+    <div class="panel-body">
+      <h3 style="color:green">
+        Right: <%= @round.right %>
+      </h3>
+      <h3 style="color:red">
+        Wrong: <%= @round.wrong %>
+      </h3>
+     </div>
+    <div class="panel-footer">
+      <button id="btn_restart" class="btn btn-danger">
+        RESTART
+      </button><br>
+      <p>Click restart to try again or change Deck.</p>
+    </div>
+  </div>
+<% end %>

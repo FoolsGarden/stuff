@@ -1,0 +1,36 @@
+  <div id = "user" >
+    <%= erb :user, layout: true %>
+  </div>
+<div align="center">
+  <div id ="Principal" class="row">
+    <div class="jumbotron">
+      <h1 class="page-header">
+        Marathon
+      </h1>
+      <h3>
+        Welcome to 'Marathon', here you will hava a lot of fun!
+      </h3>
+      <div id = "first" >
+      <button id="btn_r" class="btn btn-info">
+        SIGN UP 
+      </button>
+      <button id="btn_i" class="btn btn-success">
+        SIGN IN
+      </button>
+      </div>
+      <div id = "login" >
+        <%= erb :login, layout: true %>
+      </div>
+      <div id = "reg" >
+        <%= erb :reg, layout: true %>
+      </div>
+      <div id = "decks" >
+        <%= erb :deck, layout: true %>
+      </div>
+    </div>
+      <div id ="preguntas">
+          <%= erb :preg, layout: true %>
+      </div>  
+      
+  </div>
+</div>
