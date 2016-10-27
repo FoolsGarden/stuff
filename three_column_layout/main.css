@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  width: 750px;
+}
+
+header {
+  background-color: black;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.main-title {
+  text-align: center;
+}
+.izquierda{
+  float: left;
+  width: 50%;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.derecha{
+  float: right;
+  width: 50%;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+#izq{
+  float: left;
+  width: 33.3%;
+}
+#cent{
+  float: left;
+  width: 33.3%;
+}
+#der{
+  float: left;
+  width: 33.3%;
+}
