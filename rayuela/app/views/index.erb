@@ -4,39 +4,21 @@
   <h1 id="main-title">¡RAYUELA!</h1>
 
 <div id="Users">
+  <form id ="frm_1">
     <label>
       Player 1:
     </label>
-    <input type="text" id="player1_name">
+    <input type="text" id="player1_name" name="Player1" placeholder="Jugador uno" required>
     <label>
       Player 2:
     </label>
-    <input type="text" id="player2_name">
+    <input type="text" id="player2_name" name="Player2" placeholder="Jugador dos" required>
     <button id="btn_jugar" >Jugar</button>
+  </from>
 </div>
 
 <div id="game">
-  <button id="start_btn">Start</button><br><br>
-
-  <div id="ronda">
-  </div>
-
-  <div id="players">
-  </div>
-
-  <div id="cuenta">
-  </div>
-
-  <div id="resultado">
-  </div>
-
-  <table class="table">
-    <tr id="Player1">
-    </tr>
-
-    <tr id="Player2">
-     </tr>
-  </table>
+<%= erb :game, layout: true %>
 </div>
 
 

@@ -67,12 +67,20 @@ button:hover {
   margin-top:40px;
 }
 
-#resultado{
+#ronda{
+  float: left;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+#players{
   float: right;
   width: 50%;
   height: 40px;
   margin-bottom: 40px;
 }
+
 #cuenta{
   float: left;
   width: 50%;
@@ -80,7 +88,12 @@ button:hover {
   margin-bottom: 40px;
 }
 
-
+#resultado{
+  float: right;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 40px;
+}
 
 
 

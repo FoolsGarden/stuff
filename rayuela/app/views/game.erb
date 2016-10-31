@@ -1,0 +1,27 @@
+ <% if @pl1 && @pl2 && @score %>
+   <button id="start_btn">Start</button><br><br>
+
+    <div id="ronda">
+      <p>Click 'Start' and go on.</p>
+    </div>
+
+    <div id="players">
+      <h2><%= @pl1.name%> : <%=@score[0]%></h2>
+      <h2><%= @pl2.name%> : <%=@score[1]%></h2>
+    </div>
+
+    <div id="cuenta">
+    </div>
+
+    <div id="resultado">
+    </div>
+    
+    <table class="table">
+      <tr id="Player1">
+      </tr>
+
+      <tr id="Player2">
+       </tr>
+    </table>
+
+  <% end %>
