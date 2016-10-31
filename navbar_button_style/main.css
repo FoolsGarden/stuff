@@ -13,7 +13,7 @@ header {
 }
 ul {
     list-style-type: none;
-    margin: 20px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
     padding: 0;
     width: 710px;
     overflow: hidden;
@@ -22,7 +22,8 @@ ul {
 nav{
   margin-left: 10px;
 }
-li{
+
+ li{
   display: inline-block;
   border-radius: 5px;
   background-color: #BDBDBD;
@@ -31,11 +32,9 @@ li{
   vertical-align: middle;
 
 }
-/*a{
-  border: solid;
-}*/
 
-li a {
+
+.menu li a{
     display: block;
     border-radius: 5px;
     height: 20px;
@@ -50,3 +49,27 @@ li a:hover {
     background-color: #555;
     color: white;
 }
+/*=============================*/
+
+
+.submenu {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 139px;
+}
+
+.submenu li  {
+    display: block;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.inicio:hover .submenu{
+    visibility: visible;
+}
+
