@@ -1,0 +1,59 @@
+  <div class="jumbotron">
+  <h1>Validaciones</h1>
+  <p>Registrate o inicia sesión</p>
+</div>
+<div align='center'>
+  <button id="btn_r" type="button" class="btn btn-primary">Registrate</button>
+  <button id="btn_i" type="button" class="btn btn-info">Inicia sesion</button>
+</div>
+<!-- =========================================================== -->
+<form id='frm_r' class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Name:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="name" name='name' placeholder="nombre, ej: Maximiliano" required>
+        <p id="errors" hidden>Invalid name format, don't use special characters</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name='email' placeholder="email, ej: max@mail.com" required>
+        <p id="errors" hidden>Invalid email</p>
+      </div> 
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="pwd" name='password' placeholder="Contraseña, ej: Abcd_123456" required>
+        <p id="errors" hidden>Invalid password format</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button id='btn_reg' type="button" class="btn btn-success">Aceptar</button>
+      </div>
+    </div>
+  </form>
+<!-- =========================================================== -->
+  <form id='frm_i' class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" name='email' placeholder="email, ej: max@mail.com" required>
+        <p id="errors" hidden>Invalid email</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Contraseña:</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="pwd" name='password' placeholder="Contraseña, ej: Abc_123" required>
+        <p id="errors" hidden>Invalid password format</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button id='btn_ini' type="button" class="btn btn-success">Aceptar</button>
+      </div>
+    </div>
+  </form>
