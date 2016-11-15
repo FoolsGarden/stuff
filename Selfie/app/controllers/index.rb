@@ -55,7 +55,7 @@ post '/user/mod' do
   end
 end
 
-post '/user/out' do
+get '/user/out' do
   session.clear
   redirect  '/' 
 end
