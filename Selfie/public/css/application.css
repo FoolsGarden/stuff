@@ -1,0 +1,44 @@
+.container {
+  margin: 20px auto;
+  width: 900px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+  background: #D8D8D8;
+}
+/*button{
+  color: wait;
+  background: #51BDC4;
+}*/
+input{
+  color:gray;
+  cursor:pointer;
+}
+
+#post{
+  color:gray;
+  cursor:pointer;
+}
+
+#title{
+  color:gray;
+  cursor:pointer;
+}
+
+/*input:hover {
+    /*color: black;
+    background: gray;
+}
+
+#title:hover {
+    color: black;
+    background: gray;
+}
+
+#post:hover {
+    /*color: black;
+    background: gray;
+}*/
+
+th {
+  text-align: left;
+}
