@@ -1,0 +1,44 @@
+<header>
+  <img src="codea-logo.png">
+</header>
+
+<article>
+    <h2 class="main-title">Desarrollando aplicaciones en Ruby on Rails</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</article>
+
+<div id="comment_area">
+  <h4>Comentarios</h4>
+  <%= erb :comments ,layout: true %>
+
+  
+</div>
+<div id="area_frm_comment">
+    <form id="frm_comment">
+      <textarea name="comment_text" id="comment_text" cols="80%" rows="5" placeholder="Comentario..."></textarea>
+      <p class="error" id="error_c">Coloque un Comentario</p>
+      <input type="text" name="comment_author" placeholder="Autor...">
+      <p class="error" id="error_a">Coloque un Autor</p>
+      <button type="submit" id="btn_enviar">Enviar</button>
+      
+    </form>
+</div>
+<br>
+  <button id="new_comment_button">Nuevo Comentario</button>

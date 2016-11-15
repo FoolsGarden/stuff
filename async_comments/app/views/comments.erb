@@ -1,0 +1,7 @@
+<ul id="comment_list">
+  <% @comments.each do |comment| %>
+    <li><%= comment.body %>
+      <span class="author"><%= comment.author %></span>
+    </li>
+  <%end %>
+</ul>
