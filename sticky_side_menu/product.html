@@ -12,6 +12,8 @@
 
   <!-- Esto especifica que podamos utilizar acentos dentro del HTML  -->
   <link rel="stylesheet" href="main.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="application.js"></script>
   <title>CodeaCamp</title>
 </head>
 <body>
@@ -19,8 +21,10 @@
     <header>
       <h1>CodeaCamp</h1>
     </header>
-    <nav>
+    <div class="nav">
+      <div id='btn'>X</div>
       <ul>
+        <!-- <button id='btn' type='button'>X</button> -->
         <li><a href="#">Inicio</a></li>
         <li><a href="#que_hacemos">¿Qué Hacemos?</a></li>
         <li><a href="#pricing">Precios</a></li>
@@ -28,7 +32,7 @@
         <li><a href="#contact">Contacto</a></li>
       </ul>
       <br clear="all">
-    </nav>
+    </div>
     <div class="content">
       <div id="buzz">
         <h3>Información relevante</h3>
