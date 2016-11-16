@@ -1,0 +1,2 @@
+Comment.create(body:"Me gusta el post. No sé mucho acerca de programación pero me encantaría saber más",author:"Juan Gómez")
+Comment.create(body:"Me gusta el pan. No sé mucho acerca de panadería pero me encantaría saber más",author:"Lorenzo Servitje")
