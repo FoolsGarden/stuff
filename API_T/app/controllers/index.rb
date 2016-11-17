@@ -14,7 +14,8 @@ end
 get '/:handle' do
   @user = TwitterUser.find_or_create_by(name:params[:handle])
   if @user
-    if @user.tweets.empty?
+    if @user.tweets.empty? || !@user.update?
+      Tweet.where(twitter_user_id:@user.id).destroy_all
       tweets = CLIENT.get_all_tweets(params[:handle]).take(10)
       tweets.each do |tweet|
         tw = Tweet.create(twitter_user_id:@user.id,body:tweet.text)
