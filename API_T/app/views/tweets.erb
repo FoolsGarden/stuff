@@ -1,6 +1,6 @@
 <% if @tweets && @user %>
 <h1><%= @user.name %></h1>
-  <% @tweets.reverse.each do |tweet| %>
+  <% @tweets.each do |tweet| %>
   <p><%= tweet.body %></p>
   <% end %>
 <% end %>
