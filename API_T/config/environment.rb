@@ -12,6 +12,8 @@ require 'uri'
 require 'pathname'
 
 require 'pg'
+require 'pp'
+
 require 'active_record'
 require 'logger'
 
@@ -20,18 +22,26 @@ require "sinatra/reloader" if development?
 
 require 'erb'
 require 'twitter'
+require 'oauth'
+require 'yaml'
 
-CLIENT = Twitter::REST::Client.new do |config|
-  config.consumer_key    = "DBcuOLFtkH8AAADoBQ1fOnXXu"
-  config.consumer_secret = "A8bWbkj4DWIGopQ0TKSD51TwuFCFtnQvwJJviCWRTKDTwsEAOT"
-  config.access_token        = "3277468141-INdPCppWtmcdp6qIDrxq7ktzlhNJCy5BnsscuZw"
-  config.access_token_secret = "CPCaOWXJRrekWgcZmQUUQyK4plGUqH791NHK58b3sPPRi"
-end
 
+# CLIENT = Twitter::REST::Client.new do |config|
+#   config.consumer_key    = "DBcuOLFtkH8AAADoBQ1fOnXXu"
+#   config.consumer_secret = "A8bWbkj4DWIGopQ0TKSD51TwuFCFtnQvwJJviCWRTKDTwsEAOT"
+#   config.access_token        = "3277468141-INdPCppWtmcdp6qIDrxq7ktzlhNJCy5BnsscuZw"
+#   config.access_token_secret = "CPCaOWXJRrekWgcZmQUUQyK4plGUqH791NHK58b3sPPRi"
+# end
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
 
+
+env_config = YAML.load_file(APP_ROOT.join('config', 'twitter.yaml'))
+
+env_config.each do |key, value|
+  ENV[key] = value      
+end
 # Configura los controllers y los helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
