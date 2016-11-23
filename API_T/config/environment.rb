@@ -25,6 +25,9 @@ require 'twitter'
 require 'oauth'
 require 'yaml'
 
+require 'sidekiq'  
+require 'redis'
+
 
 # CLIENT = Twitter::REST::Client.new do |config|
 #   config.consumer_key    = "DBcuOLFtkH8AAADoBQ1fOnXXu"
@@ -32,6 +35,7 @@ require 'yaml'
 #   config.access_token        = "3277468141-INdPCppWtmcdp6qIDrxq7ktzlhNJCy5BnsscuZw"
 #   config.access_token_secret = "CPCaOWXJRrekWgcZmQUUQyK4plGUqH791NHK58b3sPPRi"
 # end
+
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s

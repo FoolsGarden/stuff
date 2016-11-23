@@ -27,7 +27,7 @@ $('body').on('submit','#frm_make_tw',function(event){
     var $form = $(this)
     var esto = $(this).find('textarea[name="tweet"]').val();
     var cadena = $(this).serialize();
-    if (esto.length < 120) {
+    if (esto.length < 120 && esto.length > 0) {
       $.post('/tweet',cadena,function(data){
         if (data) {
           $form.find('textarea[name="tweet"]').val("");
@@ -40,7 +40,7 @@ $('body').on('submit','#frm_make_tw',function(event){
       $('#wait').html('<h2>Please wait...</h2>');
       $('#wait').append('<img src="/spinner.gif" height="200" width="250">');
     }else{
-      alert("No more than 120 characters")
+      alert("Tweet between 1 and 120 characters")
     };
 
   }); 
