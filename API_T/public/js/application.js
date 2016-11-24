@@ -30,9 +30,10 @@ $('body').on('submit','#frm_make_tw',function(event){
     if (esto.length < 120 && esto.length > 0) {
       $.post('/tweet',cadena,function(data){
         if (data) {
+          $('#wait').html("<h2>Enviado correctamente</h2>");
           $form.find('textarea[name="tweet"]').val("");
-          $('#wait').html(data);
-          $form.find('textarea[name="tweet"]').focus();    
+          $form.find('textarea[name="tweet"]').focus();
+          tweet_is_ready(data);    
         }else{
           alert("Error making tweet");
         }
@@ -60,5 +61,22 @@ $('body').on('submit','#frm_make_tw',function(event){
     $('#frm_tweets').hide();
     $('#frm_make_tw').slideToggle();
   });
-//==============================================================  
+//============================================================== 
+  function tweet_is_ready(cadena) {
+    var hash={};
+    hash.job_id=cadena;
+    $.post('/tweet_status',hash,function(data){
+      if (data == "true") {
+         alert("Publicado")
+      }else{
+        tweet_not_ready(cadena);
+      };
+    });
+  };
+//============================================================== 
+  function tweet_not_ready(cadena){
+    setTimeout(function(){ tweet_is_ready(cadena); }, 1000);
+  };
+       
+//============================================================== 
 });

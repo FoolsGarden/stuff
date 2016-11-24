@@ -1,5 +1,6 @@
 class TwitterUser < ActiveRecord::Base
   has_many :tweets
+  validates :name, uniqueness: true
 #============================ Verifica que un usuario este actualizado =====
   def update?(user)
     unless self.tweets.empty?
@@ -19,4 +20,5 @@ class TwitterUser < ActiveRecord::Base
     end
     self.tweets.count == 10 
   end
+
 end

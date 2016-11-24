@@ -1,10 +1,11 @@
 class User < ActiveRecord::Base
+  validates :name, uniqueness: true
   #============================ Tweet en el futuro ============================
   def tweet_later(text)
-    # tweet = # Crea un tweet relacionado con este usuario en la tabla de tweets
-    tweet = Tweet.create(twitter_user:self.id,body:text)
-    # Este es un método de Sidekiq con el cual se agrega a la cola una tarea para ser
-    TweetWorker.perform_async(tweet.id)
+    twitter_user_id = TwitterUser.find_by(name:self.name).id
+    tweet = Tweet.create(twitter_user_id:twitter_user_id,body:text)
+    TweetWorker.perform_in(0.25.minutes,tweet.id)
+
     #La última linea debe de regresar un sidekiq job id
   end
 #============================ Hace un tweet del usuario ====================
